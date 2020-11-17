@@ -2,13 +2,20 @@
 open Suave.Filters
 open Suave.Operators
 open Suave.Successful
-open JobRepoDTOs.DataTransferObjects
+open System
+open JobRepoDTOs.Jobs
 
 let currentCiJobs =
     let jobs = [
-        { ProjectName = "patrickp89/lazor" };
-        { ProjectName = "patrickp89/halyard" };
-        { ProjectName = "patrickp89/spice" } ]
+        { JobId = Some (Guid.NewGuid ());
+            ProjectName = "patrickp89/lazor";
+            ProjectUrl = "https://github.com/patrickp89/lazor" };
+        { JobId = Some (Guid.NewGuid ());
+            ProjectName = "patrickp89/halyard";
+            ProjectUrl = "https://github.com/patrickp89/halyard" };
+        { JobId = Some (Guid.NewGuid ());
+            ProjectName = "patrickp89/spice" ;
+            ProjectUrl = "https://github.com/patrickp89/spice"} ]
     serializeJobs jobs
 
 let app =

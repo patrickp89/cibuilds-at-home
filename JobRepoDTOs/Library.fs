@@ -1,20 +1,30 @@
 ﻿namespace JobRepoDTOs
 
-module DataTransferObjects =
+module Jobs =
     open Chiron.Formatting
     open Chiron.Mapping
+    open Chiron.Operators
+    open System
 
-    type Job =
-        { ProjectName: string }
-        static member ToJson (j: Job) =
-            Json.write "projectName" j.ProjectName
+    type CiJob =
+        { JobId: Guid option;
+          ProjectName: string;
+          ProjectUrl: string }
+        static member ToJson (j: CiJob) =
+            let jobIdString =
+                match j.JobId with
+                | Some(uuid)    -> (uuid.ToString ())
+                | None          -> "" // TODO: use Json.missingMember instead?
+            Json.write "jobId" jobIdString
+            *> Json.write "projectUrl" j.ProjectUrl
+            *> Json.write "projectName" j.ProjectName
 
-    type JobList =
-        { Jobs: Job list }
-        static member ToJson (jl: JobList) =
+    type CiJobList =
+        { Jobs: CiJob list }
+        static member ToJson (jl: CiJobList) =
             Json.write "jobs" jl.Jobs
 
-    let serializeJobs (jl: Job List) =
+    let serializeJobs (jl: CiJob List) =
         let jobList =  { Jobs = jl }
         jobList
             |> Json.serialize

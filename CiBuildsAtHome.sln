@@ -9,6 +9,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "JobRepository.Test", "JobRe
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "JobRepoDTOs", "JobRepoDTOs\JobRepoDTOs.fsproj", "{F9731E0D-705E-4C0C-8179-B9AA0E4A96C2}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "JobRunnerDaemon", "JobRunnerDaemon\JobRunnerDaemon.fsproj", "{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{F9731E0D-705E-4C0C-8179-B9AA0E4A96C2}.Release|x64.Build.0 = Release|Any CPU
 		{F9731E0D-705E-4C0C-8179-B9AA0E4A96C2}.Release|x86.ActiveCfg = Release|Any CPU
 		{F9731E0D-705E-4C0C-8179-B9AA0E4A96C2}.Release|x86.Build.0 = Release|Any CPU
+		{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}.Debug|x64.Build.0 = Debug|Any CPU
+		{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}.Debug|x86.Build.0 = Debug|Any CPU
+		{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}.Release|x64.ActiveCfg = Release|Any CPU
+		{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}.Release|x64.Build.0 = Release|Any CPU
+		{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}.Release|x86.ActiveCfg = Release|Any CPU
+		{1393EFFF-3A8F-4FD7-A962-D1A021A0A419}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
